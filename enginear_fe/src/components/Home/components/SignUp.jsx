@@ -42,6 +42,7 @@ export default class SignUp extends Component {
 
     onVerifyOtpClick = (e) => {
         e.preventDefault();
+        this.props.showDashboard();
     }
 
     render() {

@@ -25,12 +25,13 @@ export default class Home extends Component {
     }
 
     render() {
+        const { showDashboard } = this.props;
         return (
             <div>
                 <h2>Connect Engineers with Customers</h2>
                 <div class="container" id="container">
-                    <SignUp />
-                    <SignIn />
+                    <SignUp showDashboard={showDashboard} />
+                    <SignIn showDashboard={showDashboard} />
                     <div class="overlay-container">
                         <div class="overlay">
                             <div class="overlay-panel overlay-left">
