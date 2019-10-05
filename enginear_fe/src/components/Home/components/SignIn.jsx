@@ -18,9 +18,21 @@ export default class SignIn extends Component {
         })
     }
 
+    login = async(data) => {
+        try {
+            const response = await ApiService.signIn(data);
+            console.log(response)
+        } catch (err) {
+            console.log(err)
+        }
+    }
     onSubmit = (e) => {
-
-
+        e.preventDefault();
+        const data = {
+            email: this.state.email,
+            password: this.state.password,
+        }
+        this.login(data)
     }
 
     render() {

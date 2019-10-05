@@ -13,7 +13,7 @@ function Sidebar(props) {
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="http://justinfarrow.com">
+                        <a href="#">
                             <i class="fa fa-home fa-2x"></i>
                             <span class="nav-text">
                                 Dashboard

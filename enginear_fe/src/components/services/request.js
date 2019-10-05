@@ -35,6 +35,20 @@ ApiService.prototype.signUp = function(phone) {
     return axios.get(url, config);
 };
 
+ApiService.prototype.signIn = function(data) {
+    let url = `http://enginear.test/api/login`;
+  
+    const config = {
+      timeout: 60000,
+      headers: {
+        "Content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      }
+    };
+  
+    return axios.post(url, data, config);
+};
+
 ApiService.prototype.validateOtP = function(data) {
     let url = `http://enginear.test/api/verify_otp`;
   

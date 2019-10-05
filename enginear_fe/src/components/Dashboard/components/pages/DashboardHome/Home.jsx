@@ -16,10 +16,18 @@ export default class Home extends Component {
 
     }
 
+    updateEngineer = () => {
+        // this.setState({
+        //     Engineers: Engineers
+        // })
+    }
+
     getNearestEngineer = async(problem) => {
         try {
             const response = await ApiService.getEngineer(problem);
-            console.log(response);
+            // (response.data.Engineers);
+            // this.updateEngineer(Engineers);
+
         } catch(err) {
             console.log(err)
         }
@@ -131,14 +139,16 @@ export default class Home extends Component {
                     <div className="Gallery-header"><a className="Gallery-close" onclick={this.closeAll}>×</a></div>
                     <div className="Gallery-images">
                         <div className="Gallery-left">
+
+
                             <div className="Gallery-image">
                                 <div class="our-team" onClick={showProfile}>
                                     <div class="picture">
                                         <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
                                     </div>
                                     <div class="team-content">
-                                        <h3 class="name">Michele Miller</h3>
-                                        <h4 class="title">Abule Oja, Yaba</h4>
+                                        <h3 class="name">Test2 Test2</h3>
+                                        <h4 class="title">Abule Oja, Yaba</h4> 
                                     </div>
                                     <ul class="social">
                                         <li><span class="fa fa-star checked"></span></li>
@@ -155,7 +165,7 @@ export default class Home extends Component {
                                         <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
                                     </div>
                                     <div class="team-content">
-                                        <h3 class="name">Michele Miller</h3>
+                                        <h3 class="name">Test3 Test3</h3>
                                         <h4 class="title">Abule Oja, Yaba</h4>
                                     </div>
                                     <ul class="social">
@@ -170,229 +180,10 @@ export default class Home extends Component {
                         </div>
                         <div className="Gallery-image Gallery-image--primary" style={{ backgroundImage: 'url(https://images.askmen.com/1080x540/2016/03/23-111859-dealing_with_a_dead_car_battery.jpg)' }}></div>
                     </div>
+                    
                     <div className="Gallery-images">
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="Gallery-images">
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="Gallery-images">
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="Gallery-images">
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="Gallery-image">
-                            <div class="our-team">
-                                <div class="picture">
-                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYKOjeORZlPfqjsC-Lj-r16dCmH91R0kf6Zfrmmyc174I0m6O" />
-                                </div>
-                                <div class="team-content">
-                                    <h3 class="name">Michele Miller</h3>
-                                    <h4 class="title">Abule Oja, Yaba</h4>
-                                </div>
-                                <ul class="social">
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star checked"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                </ul>
-                            </div>
-                        </div>
+                       
+                        
                     </div>
                 </section>
             </div >
