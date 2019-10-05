@@ -16,7 +16,8 @@ use Illuminate\Http\Request;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-
-
-Route::get('/user','UserController@getUser');
-Route::post('/create_user','UserController@createUser');
+Route::get('/send_otp/{recipient}','AuthController@createOtp');
+Route::post('/verify_otp','AuthController@verifyOtp');
+//Route::post('/register', 'AuthController@register');
+Route::post('/login', 'AuthController@authenticate');
+Route::post('/logout', 'AuthController@logout');
