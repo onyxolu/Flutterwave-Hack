@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Sidebar.css'
 import Home from '../pages/DashboardHome/Home'
+import Index from '../pages/DashboardHome/Index'
 
 function Sidebar(props) {
     return (
         <div>
             <div class="area">
-                <Home />
+                <Index />
             </div>
             <nav class="main-menu">
                 <ul>
