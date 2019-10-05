@@ -19,13 +19,14 @@ class EngineerController extends Controller
         foreach ($engineers as $engineer ){
             $first_name = $engineer->users->first_name;
             $last_name = $engineer->users->last_name;
+            $phone_number = $engineer->users->phone_num;
             $location = $engineer->location;
             $skills = array_pluck($engineer->skills,'skill');
-            $final_output = array('first_name' => $first_name,"last_name"=>$last_name,"location"=>$location,"skills"=>$skills);
+            $final_output = array('first_name' => $first_name,"last_name"=>$last_name,"phone_numnber"=>$phone_number,"location"=>$location,"skills"=>$skills);
             array_push($eng_array,$final_output);
         }
 //        dd($eng_array);
-        if($eng_array === []){
+        if($eng_array === []){          
             return response()->json(["status"=>0,"message"=>"No Engineers Found"]);
 
         }
