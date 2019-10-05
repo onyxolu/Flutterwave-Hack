@@ -98,7 +98,7 @@ class AuthController extends Controller
         $username = (string) env('SMS_EMAIL');
         $apiKey = env('SMS_API_KEY');
         $message = $this->generateOtp();
-        $options = array("username" => "$username", "apikey"=> "$apiKey" , "recipients" => $recipient,"sender" => $sender,"dndsender" => 1,"messagetext" => $message,"flash" => 0);
+        $options = array("username" => "$username", "apikey"=> "$apiKey" , "recipients" => $recipient,"sender" => $sender,"dndsender" => 0,"messagetext" => $message,"flash" => 0);
         $myURL .= http_build_query($options,'','&');
         $ch = curl_init();
         curl_setopt ($ch, CURLOPT_URL, $myURL);
