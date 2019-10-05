@@ -13,4 +13,8 @@ class Engineer extends Model
     public function skills(){
         return $this->hasMany(Skills::class,'engineer_id');
     }
+
+    public function users(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

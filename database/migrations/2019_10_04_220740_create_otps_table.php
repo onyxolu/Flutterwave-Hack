@@ -16,7 +16,7 @@ class CreateOtpsTable extends Migration
         Schema::create('otps', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('phone_number')->unique();
-            $table->string('pin')->unique();
+            $table->string('pin');
             $table->timestamps();
         });
     }
