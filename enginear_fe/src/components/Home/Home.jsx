@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './Home.css'
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import axios from 'axios'
 
 export default class Home extends Component {
 
@@ -22,6 +23,8 @@ export default class Home extends Component {
     onSignUpClick = (e) => {
         e.preventDefault();
         document.getElementById('container').classList.add("right-panel-active");
+
+
     }
 
     render() {

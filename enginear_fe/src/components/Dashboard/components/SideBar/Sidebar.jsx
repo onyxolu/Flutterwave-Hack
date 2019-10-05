@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Sidebar.css'
+import Home from '../pages/DashboardHome/Home'
+import Index from '../pages/DashboardHome/Index'
 
 function Sidebar(props) {
     return (
         <div>
-            <div class="area"></div><nav class="main-menu">
+            <div class="area">
+                <Index />
+            </div>
+            <nav class="main-menu">
                 <ul>
                     <li>
                         <a href="http://justinfarrow.com">
@@ -54,7 +59,7 @@ function Sidebar(props) {
                     <li>
                         <a href="#">
                             <i class="fa fa-info fa-2x"></i>
-                            <span class="nav-text">
+                            <span class="nav-text">y
                                 Documentation
                         </span>
                         </a>
