@@ -89,10 +89,6 @@ export class MapContainer extends Component {
                                 console.log(distance, duration, from, to);
                                 driverDetail.location = distance
                                 this.updateEnginearList(driverDetail)
-                                // const enginearList = this.state
-                                // this.setState({
-                                //     enginearList:
-                                // })
                             }
                         }
                         service.getDistanceMatrix(
