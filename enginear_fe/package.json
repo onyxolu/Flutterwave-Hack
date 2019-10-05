@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "google-maps-react": "^2.0.2",
-=======
     "axios": "^0.19.0",
->>>>>>> 17cb26b7e5ea3f562f8e7265defd13f0c97c4f98
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-geocode": "^0.2.0",
