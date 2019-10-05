@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "google-maps-react": "^2.0.2",
     "axios": "^0.19.0",
+    "google-maps-react": "^2.0.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-ravepayment": "^2.0.8",
     "react-geocode": "^0.2.0",
+    "react-ravepayment": "^2.0.8",
     "react-scripts": "3.2.0"
   },
   "scripts": {

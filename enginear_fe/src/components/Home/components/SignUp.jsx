@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import ApiService from '../../services/request'
 
 export default class SignUp extends Component {
     static propTypes = {
@@ -12,7 +13,7 @@ export default class SignUp extends Component {
         phone: '',
         email: '',
         password: '',
-        confirm_password: '',
+        confirm_password: '',   
         otp: '',
         pageToShow: 'signUp'
     }
@@ -33,15 +34,38 @@ export default class SignUp extends Component {
 
     }
 
-    onSignUpClick = (e) => {
+    onSignUpClick = async(e) => {
         e.preventDefault();
+
+        try {
+            const response = await ApiService.signUp(this.state.phone);
+            console.log(response)
+        } catch (err) {
+
+        }
+
         this.setState({
             pageToShow: 'otp'
         })
     }
 
-    onVerifyOtpClick = (e) => {
+    onVerifyOtpClick = async(e) => {
         e.preventDefault();
+        const data = {
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            phone_num: this.state.phone,
+            email: this.state.email,
+            password: this.state.password,
+            otp: this.state.otp,
+        }
+        try {
+            const response = await ApiService.validateOtP(data);
+            console.log(response)
+            this.props.showDashboard();
+        } catch (err) {
+            console.log(err);
+        }
         this.props.showDashboard();
     }
 

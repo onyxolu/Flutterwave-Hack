@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './Home.css'
+import ApiService from '../../../../services/request'
 
 export default class Home extends Component {
     static propTypes = {
@@ -15,8 +16,18 @@ export default class Home extends Component {
 
     }
 
+    getNearestEngineer = async(problem) => {
+        try {
+            const response = await ApiService.getEngineer(problem);
+            console.log(response);
+        } catch(err) {
+            console.log(err)
+        }
+    }
+
     openGallery = (id = 1) => {
         this.closeAll();
+        this.getNearestEngineer('Dead Battery');
         const gallery = document.getElementById('gallery-1');
         const card = document.getElementById('card-1');
         console.log(gallery)
