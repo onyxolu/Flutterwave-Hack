@@ -20,10 +20,15 @@ class EngineerController extends Controller
             $first_name = $engineer->users->first_name;
             $last_name = $engineer->users->last_name;
             $location = $engineer->location;
-            $final_output = array('first_name' => $first_name,"last_name"=>$last_name,"location"=>$location,"skills"=>$engineer->skills);
+            $skills = array_pluck($engineer->skills,'skill');
+            $final_output = array('first_name' => $first_name,"last_name"=>$last_name,"location"=>$location,"skills"=>$skills);
             array_push($eng_array,$final_output);
         }
 //        dd($eng_array);
+        if($eng_array === []){
+            return response()->json(["status"=>0,"message"=>"No Engineers Found");
+
+        }
         return response()->json(["status"=>1,"message"=>"Engineers Found","data"=>["Engineers"=>$eng_array]]);
 //        $engineer = $users->where('id',$)
     }
