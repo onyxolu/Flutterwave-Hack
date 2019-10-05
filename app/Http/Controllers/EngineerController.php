@@ -26,7 +26,7 @@ class EngineerController extends Controller
             array_push($eng_array,$final_output);
         }
 //        dd($eng_array);
-        if($eng_array === []){          
+        if($eng_array === []){
             return response()->json(["status"=>0,"message"=>"No Engineers Found"]);
 
         }
